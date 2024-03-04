@@ -1,4 +1,4 @@
-### Projeto de Players em PHP com Design Patterns (Active Record e Data Mapper)
+# Projeto de Players em PHP com Design Patterns (Active Record e Data Mapper)
 Este é um projeto de sistema de players desenvolvido em PHP, utilizando os padrões de design Active Record e Data Mapper para garantir uma estrutura robusta e modular. O sistema permite a gestão de players, incluindo operações como criação, leitura, atualização e exclusão (CRUD).
 
 * PHP 7.x ou superior
