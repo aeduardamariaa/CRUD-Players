@@ -1,0 +1,25 @@
+<?php
+
+use models\Database;
+use models\Player;
+use models\PlayerMapper;
+
+include '../models/Database.php';
+include '../models/Player.php';
+include '../models/PlayerMapper.php';
+
+$db = Database::getInstance('../players.db');
+
+$playerId   = $_POST['id'];
+$name       = $_POST['name'];
+$username   = $_POST['username'];
+$email      = $_POST['email'];
+$password   = $_POST['password'];
+
+$existingPlayer = new Player($name, $username, $email, $password);
+$playerMapper = new PlayerMapper($db);
+$existingPlayer->setId($playerId); 
+$playerMapper->update($existingPlayer);
+
+header('Location: ../index.php');
+exit();

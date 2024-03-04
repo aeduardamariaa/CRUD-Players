@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Player</title>
+</head>
+<body>
+    <h1>Are you sure you want to delete this player?</h1>
+    <form action="../controllers/deletePlayer.php" method="get">
+        <input type="hidden" name="id" value="{id}" readonly><br>
+
+        <label for="name">Player's name: </label>
+        <input type="text" name="name" value="{name}" readonly><br>
+
+        <label for="username">Username:</label>
+        <input type="text" name="username" value="{username}" readonly><br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" value="{email}" readonly><br>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" value="{password}" readonly><br>
+
+        <label for="registration_date">Registration Date: </label>
+        <input type="text" name="registration_date" value="{registration_date}" readonly><br>
+
+        <br>
+        <input type="hidden" name="action" value="delete" readonly>
+        <input type="submit" value="Delete">
+    </form>
+    <form action="../controllers/deletePlayer.php" method="get">
+        <input type="hidden" name="action" value="cancel" readonly>
+        <input type="submit" value="Cancel">
+    </form>
+</body>
+</html>
