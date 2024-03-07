@@ -17,7 +17,7 @@ $password = $_POST['password'];
 
 $player = new Player($name, $username, $email, $password);
 $playerMapper = new PlayerMapper($db);
-$playerMapper->insert($newPlayer);
+$playerMapper->insert($player);
 
 header('Location: ../index.php');
 exit();

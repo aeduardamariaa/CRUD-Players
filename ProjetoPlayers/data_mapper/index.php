@@ -16,18 +16,18 @@ $playerMapper = new PlayerMapper($db);
 $template = file_get_contents('views/index.html');
 $template_linha = file_get_contents('views/templateLine.html');
 
-$playerMapper->getAll();
+$players = $playerMapper->getAll(); // Substitua getAll() pelo método apropriado, por exemplo, fetchAll().
 
 $lines = '';
 
-foreach ($playerMapper as $player) {
+foreach ($players as $player) {
     $line = $template_linha;
 
-    $line = str_replace('{id}', $player['id'], $line);
-    $line = str_replace('{name}', $player['name'], $line);
-    $line = str_replace('{username}', $player['username'], $line);
-    $line = str_replace('{email}', $player['email'], $line);
-    $line = str_replace('{registration_date}', $player['registration_date'], $line);
+    $line = str_replace('{id}', $player->getId(), $line);
+    $line = str_replace('{name}', $player->getName(), $line);
+    $line = str_replace('{username}', $player->getUsername(), $line);
+    $line = str_replace('{email}', $player->getEmail(), $line);
+    $line = str_replace('{registration_date}', $player->getRegistrationDate(), $line);
 
     $lines .= $line;
 }

@@ -1,22 +1,78 @@
-#customers {
-    font-family: Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
+body, h1, h2, h3, p, ul, li, table {
+    margin: 0;
+    padding: 0;
 }
-  
-#customers td, #customers th {
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+
+.corpo {
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 30px;
+    color: #333;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.button7 {
+    background-color: #4CAF50;
+    margin-left: 20px;
+}
+
+.button5 {
+    background-color: #4285f4; 
+}
+
+.button6 {
+    background-color: #e74c3c; 
+}
+
+#customers {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px auto; 
+}
+
+#customers th, #customers td {
     border: 1px solid #ddd;
     padding: 8px;
-}
-  
-#customers tr:nth-child(even){background-color: #f2f2f2;}
-  
-#customers tr:hover {background-color: #ddd;}
-  
-#customers th {
-    padding-top: 12px;
-    padding-bottom: 12px;
     text-align: left;
-    background-color: #04AA6D;
-    color: white;
+}
+
+#customers th {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+#customers tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#customers tbody tr:hover {
+    background-color: #ddd;
+}
+
+form {
+    display: inline-block;
 }

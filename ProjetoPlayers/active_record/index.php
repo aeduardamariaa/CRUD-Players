@@ -8,13 +8,11 @@ include 'models/Player.php';
 
 $db = Database::getInstance('players.db');
 
-$default_player = new Player('default', 'default', 'default', 'default');
-
-$template = file_get_contents('../views/index.html');
-$template_linha = file_get_contents('../views/templateLine.html');
+$template = file_get_contents('views/index.html');
+$template_linha = file_get_contents('views/templateLine.html');
 
 
-$players = $default_player->getAll();
+$players = Player::getAll();
 
 $lines = '';
 

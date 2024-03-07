@@ -17,10 +17,9 @@ if($action ==='delete') {
     $playerToDelete = new Player('delete', 'delete', 'delete@example.com', 'delete');
     $playerMapper = new PlayerMapper($db);
     $playerToDelete->setId($playerId);
-    $playerMapper->delete($newPlayer);
+    $playerMapper->delete($playerToDelete);
 
 }else if($action === 'cancel') {}
 
 header('Location: ../index.php');
 exit();
-

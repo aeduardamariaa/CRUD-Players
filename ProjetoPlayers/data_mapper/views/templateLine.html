@@ -4,7 +4,8 @@
     <td>{email}</td>
     <td>{registration_date}</td>
     <td>
-            <form action="../controllers/showTemplate.php" method="post">
+        <div class="button-container">
+            <form action="../controllers/showTemplate.php" method="post" style="display: inline-block; margin-right: 5px;">
                 <input type="hidden" name="action" value="update" readonly>
                 <input type="hidden" name="id" value="{id}">
                 <input type="hidden" name="name" value="{name}">
@@ -12,10 +13,10 @@
                 <input type="hidden" name="email" value="{email}">
                 <input type="hidden" name="password" value="{password}">
                 <input type="hidden" name="registration_date" value="{registration_date}">
-
-                <input type="submit" Value="Edit">
+                <input class="button5 button" type="submit" value="Edit">
             </form>
-            <form action="../controllers/showTemplate.php" method="post">
+            
+            <form action="../controllers/showTemplate.php" method="post" style="display: inline-block;">
                 <input type="hidden" name="action" value="delete" readonly>
                 <input type="hidden" name="id" value="{id}">
                 <input type="hidden" name="name" value="{name}">
@@ -23,12 +24,11 @@
                 <input type="hidden" name="email" value="{email}">
                 <input type="hidden" name="password" value="{password}">
                 <input type="hidden" name="registration_date" value="{registration_date}">
-
-                <input type="submit" value="Delete">
+                <input class="button button6" type="submit" value="Delete">
             </form>
+        </div>
     </td>
 </tr>
-
 
 
 
