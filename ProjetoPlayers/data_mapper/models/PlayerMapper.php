@@ -71,8 +71,8 @@ class PlayerMapper
         $players = [];
     
         while ($row = $stmt->fetch(\PDO::FETCH_ASSOC)) {
-            $player = new Player($row['name'], $row['username'], $row['email'], $row['registration_date']);
-            $player->setId($row['id']); // Certifique-se de ter um método setId() em sua classe Player
+            $player = new Player($row['name'], $row['username'], $row['email'],  $row['password']);
+            $player->setId($row['id']);
             $players[] = $player;
         }
     

@@ -15,7 +15,6 @@ class Player
 
     public function __construct($name, $username, $email, $password)
     {
-        $this->id = uniqid('player_', true);
         $this->name = $name;
         $this->username = $username;
         $this->email = $email;

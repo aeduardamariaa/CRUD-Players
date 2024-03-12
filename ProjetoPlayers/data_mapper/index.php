@@ -27,6 +27,7 @@ foreach ($players as $player) {
     $line = str_replace('{name}', $player->getName(), $line);
     $line = str_replace('{username}', $player->getUsername(), $line);
     $line = str_replace('{email}', $player->getEmail(), $line);
+    $line = str_replace('{password}', $player->getPassword(), $line);
     $line = str_replace('{registration_date}', $player->getRegistrationDate(), $line);
 
     $lines .= $line;
